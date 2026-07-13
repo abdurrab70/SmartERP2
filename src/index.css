@@ -2,10 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ১. পুরো ওয়েবসাইটের ব্যাকগ্রাউন্ড হালকা ধূসর (Light Grey) করার জন্য */
 body {
-  background-color: #f8f9fa;
-  color: #0f172a;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  overflow: hidden;
-  user-select: none;
+  background-color: #f3f4f6; /* স্ট্যান্ডার্ড লাইট গ্রে কালার */
+}
+
+/* ২. ওয়েবসাইটের বাটনগুলোর ব্যাকগ্রাউন্ড অরেঞ্জ করার জন্য */
+button, .btn {
+  background-color: lightgrey; /* অরেঞ্জ কালার */
+  color: white;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+
+/* মাউস হোভার করলে বাটনের কালার একটু ডার্ক হবে */
+button:hover, .btn:hover {
+  background-color: #ea5a0c3f; 
+}
+
+/* ৩. ইনপুট বক্স সিলেক্ট (Focus) করলে বর্ডার অরেঞ্জ করার জন্য */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #f9741654 !important; /* বর্ডার অরেঞ্জ হবে */
+  box-shadow: 0 0 0 2px rgba(249, 115, 22, 0.2) !important; /* হালকা অরেঞ্জ গ্লো (Glow) */
 }
